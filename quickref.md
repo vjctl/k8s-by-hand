@@ -3,7 +3,8 @@
 | pidof <PROCESS> |
 | ps -fp <PID> |
 | lsof -p <PID> |
-| ps -aux |
+| ps aux |
+| ps -ef |
 
 | Networking |
 |------------|
@@ -14,6 +15,8 @@
 |----------|
 | strace -p <PID> |
 | strace -c <PROCESS> |
+| getcap <PROCESS_PATH> |
+| getpcaps <PID> |
 
 | Directories |
 |-------------|
@@ -29,3 +32,15 @@
 | k get --raw "/api/v1/nodes/<NODE_NAME>/proxy/stats/summary" |
 | k debug <NAME> -it --image=busybox --target <CONTAINER_NAME> -n <NAMESPACE> |
 | journalctl -u kubelet --no-pager |
+| cat /usr/include/asm*/unistd* |
+
+| AppArmor |
+|-------|
+| systemctl status apparmor|
+| cat /sys/module/apparmor/parameters/enabled |
+| cat /sys/kernel/security/apparmor/profiles |
+| apt-get install -y apparmor-utils |
+| aa-status |
+| aa-genprof <SCRIPT_PATH> |
+| /etc/apparmor.d/ |
+| appaprmor_parser |
