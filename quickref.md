@@ -5,6 +5,7 @@
 | lsof -p <PID> |
 | ps aux |
 | ps -ef |
+| pgrep -a <PROCESS> |
 
 | Networking |
 |------------|
